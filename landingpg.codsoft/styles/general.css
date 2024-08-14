@@ -1,0 +1,39 @@
+.general {
+    height: 350px;
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    min-width: 750px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.general:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+.image-wrapper img.top-image {
+    opacity: 0; /* Hide the top image initially */
+}
+
+.image-wrapper:hover img.top-image {
+    opacity: 1; /* Show the top image on hover */
+}
+
+.image-wrapper:hover img.bottom-image {
+    opacity: 0; /* Hide the bottom image on hover */
+}
